@@ -1,23 +1,22 @@
 import React from "react";
-import { CHANNELS } from "./../constants/appConstants";
 
-const Channels = () => {
+const CompItemArr = (props) => {
   return (
-    <div className="ch-item-wrapper">
-      {CHANNELS.map((item) => (
+    <div className={props.wrapperClass}>
+      {props.dataArr.map((item) => (
         <div
           key={item.id}
-          className="comp-items"
+          className={props.itemContainerClass}
           style={{
             backgroundColor: item.isHealthy ? "#000000" : "#F23A3A",
             color: item.isHealthy ? "#cacaca" : "#000000",
           }}
         >
-          <div className="comp-items-name">{item.name}</div>
+          <div className={props.itemClass}>{item.name}</div>
         </div>
       ))}
     </div>
   );
 };
 
-export default Channels;
+export default CompItemArr;

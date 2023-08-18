@@ -39,7 +39,6 @@ export const OPTIONS = {
     },
   },
 
-  //   colors: ["#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51", "#4FAAD1"],
   responsive: [
     {
       breakpoint: 250,
@@ -89,7 +88,7 @@ export const OPTIONS = {
     ],
   },
   legend: {
-    position: "left",
+    position: "top",
     offsetY: 20,
   },
   fill: {

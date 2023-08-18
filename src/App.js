@@ -1,10 +1,14 @@
 import "./App.css";
 import ApexChart from "./components/ApexChart";
-import Channels from "./components/Channels";
-import Locales from "./components/Locales";
-import MicroServices from "./components/MicroServices";
-import Types from "./components/Types";
-import Vendors from "./components/Vendors";
+import CompItemArr from "./components/CompItemArr";
+
+import {
+  CHANNELS,
+  LOCALE,
+  MICRO_SERVICES,
+  TYPES,
+  VENDORS,
+} from "./constants/appConstants";
 
 function App() {
   return (
@@ -14,31 +18,56 @@ function App() {
           <div className="header">Focus Room</div>
           <div className="channel-wrapper">
             <div className="title">Channels</div>
-            <Channels />
+            <CompItemArr
+              dataArr={CHANNELS}
+              wrapperClass="ch-item-wrapper"
+              itemContainerClass="comp-items"
+              itemClass="comp-items-name"
+            />
           </div>
           <div className="inter-row">
             <div className="col-3">
               <div className="locale-wrapper">
                 <div className="title">Locale</div>
-                <Locales />
+                <CompItemArr
+                  dataArr={LOCALE}
+                  wrapperClass="loc-item-wrapper"
+                  itemContainerClass="comp-items"
+                  itemClass="comp-items-name"
+                />
               </div>
             </div>
             <div className="col-9">
               <div className="type-wrapper">
                 <div className="title">Types</div>
-                <Types />
+                <CompItemArr
+                  dataArr={TYPES}
+                  wrapperClass="type-item-wrapper"
+                  itemContainerClass="comp-items"
+                  itemClass="comp-items-name"
+                />
               </div>
             </div>
           </div>
           <div className="vendor-wrapper">
             <div className="title">Vendors</div>
-            <Vendors />
+            <CompItemArr
+              dataArr={VENDORS}
+              wrapperClass="item-wrapper"
+              itemContainerClass="comp-items"
+              itemClass="comp-items-name"
+            />
           </div>
         </div>
         <div className="col-9">
           <div className="microservices-wrapper">
             <div className="title">Micro services</div>
-            <MicroServices />
+            <CompItemArr
+              dataArr={MICRO_SERVICES}
+              wrapperClass="ms-item-wrapper"
+              itemContainerClass="ms-comp-items"
+              itemClass="comp-items-name"
+            />
           </div>
           <div className="chart-wrapper">
             <ApexChart />
